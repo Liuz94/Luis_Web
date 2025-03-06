@@ -1,0 +1,77 @@
+.body{
+    font-family: "Public Sans", sans-serif;
+
+}
+/* Animaciones personalizadas */
+@keyframes moveBackground1 {
+    0% { transform: translateX(0) translateY(0); }
+    50% { transform: translateX(-10px) translateY(-10px); }
+    100% { transform: translateX(0) translateY(0); }
+}
+
+@keyframes moveBackground2 {
+    0% { transform: translateX(0) translateY(0); }
+    50% { transform: translateX(10px) translateY(10px); }
+    100% { transform: translateX(0) translateY(0); }
+}
+
+@keyframes moveBackground3 {
+    /* 0% { transform: translateX(0) translateY(0); }
+    50% { transform: translateX(-5px) translateY(5px); }
+    100% { transform: translateX(0) translateY(0); } */
+}
+
+/* Animación para cambiar la opacidad */
+@keyframes changeOpacity {
+    0% { opacity: 0.2; }
+    25% { opacity: 0.7; }
+    50% { opacity: 1; }
+    75% { opacity: 0.7; }
+    100% { opacity: 0.2; }
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 0.04; } /* Más translúcido */
+    100% { opacity: 0; }
+}
+
+.fade-text {
+    animation: fadeInOut 6s infinite linear; /* Duración de 6 segundos, transición lineal */
+}
+
+/* Clases personalizadas para las animaciones */
+.animate-move-background-1 {
+    animation: moveBackground1 10s infinite ease-in-out;
+    z-index: 3;
+}
+
+.animate-move-background-2 {
+    animation: moveBackground2 8s infinite ease-in-out;
+    z-index: 2;
+}
+
+.animate-move-background-3 {
+    animation: moveBackground3 12s infinite ease-in-out;    
+    z-index: 1;
+}
+
+.animate-change-opacity {
+    animation: changeOpacity 5s infinite cubic-bezier(0.4, 0, 0.2, 1); /* Curva de Bézier personalizada */
+
+}
+
+.buttoms-right{
+    z-index: 50;
+}
+
+.text-with-border {
+    color: rgb(255, 255, 255); /* Color del texto */
+
+    filter: drop-shadow(4px 4px 6px rgba(255, 255, 255, 0.527)); /* Sombra blanca difuminada */
+}
+
+.TextTransl{
+
+    z-index: 1;
+}

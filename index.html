@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondo con Efecto de Animación</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/4053f4dfbe.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body class="relative h-screen overflow-hidden">
+    <!-- Capas de fondo con imágenes -->
+
+    <div
+        class="absolute inset-0 bg-cover bg-center animate-move-background-1 animate-change-opacity"
+        style="background-image: url('images/Bg-WEb_Soft.png');  mix-blend-mode: overlay;"
+    ></div>
+
+    <div class="absolute inset-0 bg-cover bg-center animate-move-background-2">
+        <canvas id="firefliesCanvas"></canvas>
+        <script type="module" src="fireflies.js"></script> <!-- Vincula el archivo TypeScript compilado -->
+    </div>
+    
+    <div
+        class="absolute inset-0 bg-cover bg-center animate-move-background-2"
+        style="background-image: url('images/background_chica.png');"
+    ></div>
+    
+    <div
+        class="absolute inset-0 bg-cover bg-center animate-move-background-3"
+        style="background-image: url('images/Bg-WEb.png');"
+    ></div>
+
+    <!-- Contenido principal -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-white">
+        <!-- Recuadro con fondo difuminado -->
+        <div class="bg-green-500/10 backdrop-blur-sm p-8 rounded-lg shadow-lg">
+            <h1 class="text-5xl font-bold mb-4 text-center text-with-border">Luis Remache</h1>
+            <p class="text-xl text-center">CyberSecurity Enthusiast | Trying Bug Hunter | </p>
+            <p class="text-xl text-center">  Learning Malware Development | Engineer | CTF Player</p>
+        </div>
+    </div>
+
+     <!-- Texto translúcido en la parte superior central -->
+     <div class="TextTransl absolute top-20 left-1/2 transform -translate-x-1/2 text-center fade-text">
+        <p class="text-cyan-300 text-7xl font-semibold">$NERALY</p>
+    </div>
+
+
+    <!-- Cuadro con botones en la esquina superior derecha -->
+    <div class="absolute top-4 right-4 pt-4 buttoms-right"> <!-- Padding-top de 1rem (16px) -->
+        <div class="bg-blue-500/30 backdrop-blur-md rounded-3xl shadow-lg p-6 flex space-x-9">
+            <!-- Botón "Blog" -->
+            <a href="blog.html" class="text-white  font-bold hover:text-gray-300 transition duration-300 text-2xl">Blog</a>
+
+            <!-- Botón LinkedIn -->
+            <a href="https://www.linkedin.com/in/luis-remache/" rel="noopener noreferrer" target="_blank" class="text-white hover:text-blue-300 transition duration-300 text-2xl">
+                <i class="fab fa-linkedin"></i> <!-- Icono de LinkedIn -->
+            </a>
+
+            <!-- Botón GitHub -->
+            <a href="https://github.com/Liuz94" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition duration-300 text-2xl">
+                <i class="fab fa-github"></i> <!-- Icono de GitHub -->
+            </a>
+
+            <!-- Botón X (Twitter) -->
+            <a href="https://x.com/luizxz94" target="_blank"  rel="noopener noreferrer" class="text-white hover:text-gray-300 transition duration-300 text-2xl">
+                <i class="fab fa-x-twitter"></i> <!-- Icono de X (Twitter) -->
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

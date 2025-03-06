@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "ES6",
+        "outDir": "./dist",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": ["**/*.ts"], // Incluye todos los archivos .ts en el proyecto
+    "exclude": ["node_modules"] // Excluye la carpeta node_modules
+}
